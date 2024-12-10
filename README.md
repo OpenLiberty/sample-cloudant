@@ -25,7 +25,7 @@ Two more boxes will appear, one with your crew members (which you can click to r
 docker stop liberty_cloudant
 ```
 ### How it works
-This application uses a CDI producer ([CloudantProducer.java](https://github.com/OpenLiberty/sample-cloudant/blob/main/src/main/java/io/openliberty/sample/cloudant/CloudantProducer.java)) to inject a Cloudant client.It provides access to the database in a RESTful manner in [CrewService.java](https://github.com/OpenLiberty/sample-cloudant/blob/main/src/main/java/io/openliberty/sample/application/CrewService.java) using the `/db/crew` endpoint. For more info on using a CDI producer with Cloudant, check out this [blog post](https://openliberty.io/blog/2024/12/09/cloudant-with-open-liberty.html)
+This application uses a CDI producer ([CloudantProducer.java](https://github.com/OpenLiberty/sample-cloudant/blob/main/src/main/java/io/openliberty/sample/cloudant/CloudantProducer.java)) to inject a Cloudant client.It provides access to the database in a RESTful manner in [CrewService.java](https://github.com/OpenLiberty/sample-cloudant/blob/main/src/main/java/io/openliberty/sample/application/CrewService.java) using the `/db/crew` endpoint. For more info on using a CDI producer with Cloudant, check out this [blog post](https://openliberty.io/blog/2024/12/09/cloudant-with-open-liberty.html).
 
 Calling `POST /{id}` on the endpoint uses [Jakarta Validation](https://openliberty.io/guides/bean-validation.html) to validate the data received from the front end. [CrewMember.java](https://github.com/OpenLiberty/sample-cloudant/blob/main/src/main/java/io/openliberty/sample/application/CrewMember.java) shows the constraints as well as the messages we return to the user if those constraints aren't met.
 ```java
