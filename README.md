@@ -9,7 +9,7 @@ git clone git@github.com:OpenLiberty/sample-cloudant.git
 ### Setup CouchDb
 The Cloudant client is also compatible with CouchDb, which is needed for running the sample locally. If you have Docker installed, you can use the following:
 ```
-docker run -d --name liberty_cloudant -p 5984:5984 -e COUCHDB_USER=admin -e COUCHDB_PASSWORD=password couchdb:3.4.2
+docker run -d --name liberty_cloudant -p 5984:5984 -e COUCHDB_USER=admin -e COUCHDB_PASSWORD=password couchdb:3.5.0
 ```
 ## Running the Sample
 From inside the sample-cloudant directory, build and start the application in Open Liberty with the following command:
